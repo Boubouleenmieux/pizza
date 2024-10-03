@@ -26,7 +26,7 @@
     </div>
   </nav>
 </header>
-<p>ceci est la carte</p>
+<p>MENU</p>
 
 <div class="container">
   <div class="row">
@@ -39,21 +39,21 @@
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa2qRMTC5NvqcQavJjyK2FqgevKQcGKGV8RQ&s" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">margarita</p>
+          <p class="card-text">Margarita</p>
           <p class="card-text">14.50€</p>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://aundetailpres.fr/wp-content/uploads/2023/12/DALL%C2%B7E-2024-01-03-17.23.37-A-whole-Tandoori-pizza-presented-on-a-wooden-pizza-board-showcasing-an-exotic-and-colorful-style.-The-dough-is-golden-and-crispy-with-slightly-puffe-600x600.png" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Tandoori</p>
           <p class="card-text">18€</p>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://pizzavibes.fr/wp-content/uploads/2024/02/pizza-raclette-recette-500x342.webp" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Raclette</p>
           <p class="card-text">18€</p>
@@ -62,28 +62,28 @@
     </div>
     <div class="col-md-6">
       <div class="card mb-12" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://lelocalapizzas.fr/wp-content/uploads/2023/04/pizza-saumon-creme-fraiche-recette.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">L'Océa-nique</p>
           <p class="card-text">18€</p>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnupPxNgOtc5CUQ5M-aoYdhxff2pDQDEbN5w&s" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Diavola</p>
           <p class="card-text">18€</p>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://www.galbani.fr/wp-content/uploads/2020/03/Image1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">4 saisons</p>
           <p class="card-text">18€</p>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="https://dxpulwm6xta2f.cloudfront.net/eyJidWNrZXQiOiJhZGMtZGV2LWltYWdlcy1yZWNpcGVzIiwia2V5IjoicGl6emFfcGVwcGVyb25pLmpwZyIsImVkaXRzIjp7ImpwZWciOnsicXVhbGl0eSI6ODB9LCJwbmciOnsicXVhbGl0eSI6ODB9LCJ3ZWJwIjp7InF1YWxpdHkiOjgwfX19" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Peperoni</p>
           <p class="card-text">18€</p>
@@ -91,6 +91,8 @@
       </div>
     </div>
   </div>
+  <h2>CARTE DES DESSERTS</h2>
+  <h3>BOISSONS</h3>
 </div>
 
 </body>
