@@ -37,18 +37,26 @@ try {
 // Vérifier si le mot de passe et le pseudo correspondent
 if (isset($_POST["password"]) && isset($_POST["name"])) {
     if ($_POST["password"] == $user['password'] && $_POST["name"] == $user['name']) {
-        echo ("Ton Identifiant est : " . $_POST["name"] . "<br>");
-        echo ("Ton MDP est : " . $_POST["password"]);
+        // Redirection vers une nouvelle page après connexion réussie
+        header('Location: success_admin.php'); // Remplacez par le nom de la page que vous souhaitez afficher
+        exit;
     } else {
-        echo ("Identifiant ou mot de passe incorrect");
+        // Redirection vers la page précédente après échec de connexion
+        header('Location: ' . $_SERVER['HTTP_REFERER']); // Redirection vers la page précédente
+        exit;
     }
 } else {
     if (!isset($_POST["name"]) || empty($_POST["name"])) {
         echo ("Identifiant vide");
+        header('Location: ' . $_SERVER['HTTP_REFERER']); // Redirection vers la page précédente
+        exit;
     }
     if (!isset($_POST["password"]) || empty($_POST["password"])) {
         echo ("mot de passe vide");
+        header('Location: ' . $_SERVER['HTTP_REFERER']); // Redirection vers la page précédente
+        exit;
     }
 }
+
 
 ?>

@@ -1,28 +1,3 @@
-<?php
-$dsn = 'mysql:host=localhost;dbname=pizzeria_stromboli';
-$username = 'root';
-$password = '';
-
-
-if (isset($_POST['email']) && isset($_POST['password'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM utilisateurs WHERE email = '$email' AND password = '$password'";
-    $resultat = $connexion->query($sql);
-
-    if ($resultat->rowCount() > 0) {
-        // L'utilisateur est connecté, affichez la page d'administration
-        header('Location: formulaire_admin.php');
-    } else {
-        // L'utilisateur n'est pas connecté, affichez un message d'erreur
-        echo 'Erreur de connexion';
-    }
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
