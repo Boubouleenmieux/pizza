@@ -32,10 +32,11 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card mb-12" style="width: 18rem;">
-      <img src="...">  
+      <img src="https://lelocalapizzas.fr/wp-content/uploads/2022/02/recette-pizza-chevre-miel.jpg">  
       <div class="card-body">
           <p class="card-text">chèvre-miel</p>
           <p class="card-text">18€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -43,6 +44,7 @@
         <div class="card-body">
           <p class="card-text">Margarita</p>
           <p class="card-text">14.50€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -50,6 +52,7 @@
         <div class="card-body">
           <p class="card-text">Tandoori</p>
           <p class="card-text">18€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -57,6 +60,7 @@
         <div class="card-body">
           <p class="card-text">Raclette</p>
           <p class="card-text">18€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
     </div>
@@ -66,6 +70,7 @@
         <div class="card-body">
           <p class="card-text">L'Océa-nique</p>
           <p class="card-text">18€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -73,6 +78,7 @@
         <div class="card-body">
           <p class="card-text">Diavola</p>
           <p class="card-text">18€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -80,6 +86,7 @@
         <div class="card-body">
           <p class="card-text">4 saisons</p>
           <p class="card-text">18€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -87,6 +94,7 @@
         <div class="card-body">
           <p class="card-text">Peperoni</p>
           <p class="card-text">18€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
     </div>
@@ -101,6 +109,7 @@
         <div class="card-body">
           <p class="card-text">Coca-cola</p>
           <p class="card-text">3€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -108,6 +117,7 @@
         <div class="card-body">
           <p class="card-text">Pepsi</p>
           <p class="card-text">3€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
     </div>
@@ -117,6 +127,7 @@
         <div class="card-body">
           <p class="card-text">Fanta</p>
           <p class="card-text">3€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
     </div>
@@ -131,6 +142,7 @@
         <div class="card-body">
           <p class="card-text">Tiramisu</p>
           <p class="card-text">4.90€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
       <div class="card mb-12" style="width: 18rem;">
@@ -138,6 +150,7 @@
         <div class="card-body">
           <p class="card-text">Panna-Cota</p>
           <p class="card-text">4.90€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
     </div>
@@ -147,6 +160,7 @@
         <div class="card-body">
           <p class="card-text">Gelato</p>
           <p class="card-text">3.90€</p>
+          <button class)"btn-acheter">Acheter</button>
         </div>
       </div>
     </div>
