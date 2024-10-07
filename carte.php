@@ -1,3 +1,29 @@
+<?php
+// Configuration de la connexion à la base de données
+$dsn = 'mysql:host=localhost;dbname=pizzeria_stromboli';
+$username = 'root';
+$password = '';
+
+// Connexion à la base de données avec PDO
+try {
+  $pdo = new PDO($dsn, $username, $password);
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+  echo 'Erreur de connexion : ' . $e->getMessage();
+  exit();
+}
+
+// Récupération des catégories de plats
+$query = "SELECT * FROM categories";
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+
+// Début du code HTML
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -29,128 +55,39 @@
 <p>MENU</p>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card mb-12" style="width: 18rem;">
-      <img src="...">  
-      <div class="card-body">
-          <p class="card-text">chèvre-miel</p>
-          <p class="card-text">18€</p>
+  <?php
+  // Affichage des catégories de plats
+  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    ?>
+    <h2><?php echo $row['nom']; ?></h2>
+    <div class="row">
+      <?php
+      // Récupération des plats de la catégorie actuelle
+      $query = "SELECT * FROM plats WHERE categorie_id = " . $row['id'];
+      $stmtPlats = $pdo->prepare($query);
+      $stmtPlats->execute();
+
+      // Affichage des plats de la catégorie actuelle
+      while ($rowPlat = $stmtPlats->fetch(PDO::FETCH_ASSOC)) {
+        ?>
+        <div class="col-md-6">
+          <div class="card mb-12" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><?php echo $rowPlat['name']; ?></p>
+              <p class="card-text"><?php echo $rowPlat['price']; ?>€</p>
+              <button class)"btn-acheter">Acheter</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa2qRMTC5NvqcQavJjyK2FqgevKQcGKGV8RQ&s" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Margarita</p>
-          <p class="card-text">14.50€</p>
-        </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://aundetailpres.fr/wp-content/uploads/2023/12/DALL%C2%B7E-2024-01-03-17.23.37-A-whole-Tandoori-pizza-presented-on-a-wooden-pizza-board-showcasing-an-exotic-and-colorful-style.-The-dough-is-golden-and-crispy-with-slightly-puffe-600x600.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Tandoori</p>
-          <p class="card-text">18€</p>
-        </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://pizzavibes.fr/wp-content/uploads/2024/02/pizza-raclette-recette-500x342.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Raclette</p>
-          <p class="card-text">18€</p>
-        </div>
-      </div>
+        <?php
+      }
+      ?>
     </div>
-    <div class="col-md-6">
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://lelocalapizzas.fr/wp-content/uploads/2023/04/pizza-saumon-creme-fraiche-recette.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">L'Océa-nique</p>
-          <p class="card-text">18€</p>
-        </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnupPxNgOtc5CUQ5M-aoYdhxff2pDQDEbN5w&s" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Diavola</p>
-          <p class="card-text">18€</p>
-        </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://www.galbani.fr/wp-content/uploads/2020/03/Image1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">4 saisons</p>
-          <p class="card-text">18€</p>
-        </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://dxpulwm6xta2f.cloudfront.net/eyJidWNrZXQiOiJhZGMtZGV2LWltYWdlcy1yZWNpcGVzIiwia2V5IjoicGl6emFfcGVwcGVyb25pLmpwZyIsImVkaXRzIjp7ImpwZWciOnsicXVhbGl0eSI6ODB9LCJwbmciOnsicXVhbGl0eSI6ODB9LCJ3ZWJwIjp7InF1YWxpdHkiOjgwfX19" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Peperoni</p>
-          <p class="card-text">18€</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <?php
+  }
+  ?>
 </div>
-<div class="container">
-  <h2>Boissons</h2>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://example.com/image-boisson1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Coca-cola</p>
-          <p class="card-text">3€</p>
-        </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://example.com/image-boisson2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Pepsi</p>
-          <p class="card-text">3€</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://example.com/image-boisson3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Fanta</p>
-          <p class="card-text">3€</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <h2>Desserts</h2>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://example.com/image-dessert1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Tiramisu</p>
-          <p class="card-text">4.90€</p>
-        </div>
-      </div>
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://example.com/image-dessert2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Panna-Cota</p>
-          <p class="card-text">4.90€</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card mb-12" style="width: 18rem;">
-        <img src="https://example.com/image-dessert3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Gelato</p>
-          <p class="card-text">3.90€</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 </body>
 </html>

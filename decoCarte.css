@@ -1,37 +1,164 @@
-/* style header */
+
+:root {
+  --couleur-principale: #8B9467; 
+  --couleur-secondaire: #FFC080; 
+  --couleur-texte: #FFFFFF;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  background-image: url(...);
+}
 header {
-    background-color: #219b0c;
-    color: #bf1f1f;
-    padding: 1em;
-    text-align: center;
-  }
-  
-  /* style cartes */
-  .card {
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(248, 245, 245, 0.922);
-  }
-  
-  .card-img-top {
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-text {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  /* style texte */
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .card {
-    margin: 10px;
-    display: inline-block;
-  }
+  background-color: var(--couleur-principale);
+  color: burlywood;
+  padding: 20px;
+  text-align:center;
+
+}
+
+
+
+
+header nav {
+  background-color:green;
+  padding: 10px;
+}
+
+header nav a {
+  color: red;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: white;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text:last-child {
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+}
+
+
+.boisson, .dessert {
+  background-color: #F7F7F7;
+  padding: 20px;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.boisson img, .dessert img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.boisson .card-body, .dessert .card-body {
+  padding: 20px;
+}
+
+.boisson .card-text, .dessert .card-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.boisson .card-text:last-child, .dessert .card-text:last-child {
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+}
+
+
+header {
+  background-image: url('https://www.code-couleur.com/images/main/header2020/drapeau-italie.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card img {
+  border: 2px solid green;
+}
+
+.card-body {
+  border: 2px solid white;
+}
+
+.boisson, .dessert {
+  border: 2px solid red;
+}
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.phone-number-container {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.email-container {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #12b522;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.text-center {
+  text-align: center;
+}
+.stromboli-history h2 {
+  text-align: center;
+}
