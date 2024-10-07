@@ -46,7 +46,7 @@ $stmt->execute();
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="carte.php">La carte</a>
-          <a class="nav-link" href="contact.php">Passer Commande</a>
+          <a class="nav-link" href="contact.php">Passer commande</a>
         </div>
       </div>
     </div>
